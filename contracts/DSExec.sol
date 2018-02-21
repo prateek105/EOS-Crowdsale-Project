@@ -1,3 +1,5 @@
+pragma solidity 0.4.18;
+
 contract DSExec {
     function tryExec( address target, bytes calldata, uint value)
             internal
