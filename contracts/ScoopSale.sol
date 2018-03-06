@@ -97,8 +97,8 @@ contract ScoopSale is DSAuth, DSExec, DSMath {
         assert(day >= today());
         assert(day <= numberOfDays);
 
-        userBuys[day][msg.sender] += msg.value;
-        dailyTotals[day] += msg.value;
+        userBuys[day][msg.sender] = add(userBuys[day][msg.sender], msg.value);
+        dailyTotals[day] = add(dailyTotals[day], msg.value);
 
         if (limit != 0) {
             assert(dailyTotals[day] <= limit);
