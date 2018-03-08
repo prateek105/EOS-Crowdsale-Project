@@ -27,7 +27,6 @@ contract ScoopSale is DSAuth, DSExec, DSMath {
     event LogBuy      (uint window, address user, uint amount);
     event LogClaim    (uint window, address user, uint amount);
     event LogCollect  (uint amount);
-    event LogFreeze   ();
 
     function ScoopSale(
         uint     _numberOfDays,
